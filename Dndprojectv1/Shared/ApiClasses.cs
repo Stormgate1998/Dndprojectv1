@@ -5,7 +5,10 @@ namespace Dndprojectv1.Shared
 
     public class ApiClasses
     {
+        public class Spell
+        {
 
+        }
         public class Rootobject
         {
             [JsonIgnore]

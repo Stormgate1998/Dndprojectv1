@@ -8,6 +8,9 @@
     [Parameter]
     public string spellid { get; set; }
 
+    //get only spell data
+    //build spell class
+
     [Inject]
     public HttpClient httpClient { get; set; }
 
@@ -17,7 +20,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        myJson = await JsonSerializer.DeserializeAsync<ApiClasses.Rootobject>
+        myJson = await JsonSerializer.DeserializeAsync<ApiClasses.Spell>
         (await httpClient.GetStreamAsync($"/api/spells"));
         mySpells = myJson.results;
     }
