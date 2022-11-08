@@ -40,8 +40,8 @@ namespace Dndprojectv1.Shared
             public bool concentration { get; set; }
             public string casting_time { get; set; }
             public int level { get; set; }
-            public string attack_type { get; set; }
-            public Damage damage { get; set; }
+            public string? attack_type { get; set; }
+            public Damage? damage { get; set; }
             public School school { get; set; }
             public Class1[] classes { get; set; }
             public Subclass[] subclasses { get; set; }

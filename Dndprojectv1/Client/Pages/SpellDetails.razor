@@ -32,14 +32,14 @@
     {
         <p>Damage Type: @mySpell.damage.damage_type.name</p<!--Add code to link this to the damage type page?-->
 <p>Damage at levels:</p>
-<p>2: @damage._2</p>
-<p>3: @damage._3</p>
-<p>4: @damage._4</p>
-<p>5: @damage._5</p>
-<p>6: @damage._6</p>
-<p>7: @damage._7</p>
-<p>8: @damage._8</p>
-<p>9: @damage._9</p>
+<p>2: @mySpell.damage.damage_at_slot_level._2</p>
+<p>3: @mySpell.damage.damage_at_slot_level._3</p>
+<p>4: @mySpell.damage.damage_at_slot_level._4</p>
+<p>5: @mySpell.damage.damage_at_slot_level._5</p>
+<p>6: @mySpell.damage.damage_at_slot_level._6</p>
+<p>7: @mySpell.damage.damage_at_slot_level._7</p>
+<p>8: @mySpell.damage.damage_at_slot_level._8</p>
+<p>9: @mySpell.damage.damage_at_slot_level._9</p>
 }
 <p>School of Magic: @mySpell.school.name</p><!--Add code to link this to the school page-->
 <p>Classes that can cast:</p>
@@ -73,6 +73,6 @@
         mySpell = await JsonSerializer.DeserializeAsync<Spell.Rootobject>
          (await httpClient.GetStreamAsync($"/api/spells/{spellindex}"));
 
-        damage = mySpell.damage.damage_at_slot_level;
+       // damage = mySpell.damage.damage_at_slot_level;
     }
 }
