@@ -1,4 +1,4 @@
-﻿@page "/spells"
+﻿@page "/spell"
 @using System.Text.Json;
 @using System.Text.Json.Serialization;
 @using Dndprojectv1.Shared
@@ -6,7 +6,10 @@
 @if(mySpells != null){
     @foreach (ApiClasses.Result spell in mySpells)
     {
+
+        <a href="/spell/@spell.index">
         <p>@spell.name</p>
+        </a> 
     }
 
 }
@@ -16,9 +19,11 @@
     [Inject]
     public HttpClient httpClient { get; set; }
 
+
     public ApiClasses.Rootobject myJson { get; set; }
 
     public ApiClasses.Result[] mySpells { get; set; }
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -26,4 +31,5 @@
         (await httpClient.GetStreamAsync($"/api/spells"));
         mySpells = myJson.results;
     }
+    
 }
