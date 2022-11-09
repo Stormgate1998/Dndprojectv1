@@ -12,12 +12,15 @@
 @foreach(string comp in mySpell.components){
     <p>@comp</p>
 }
-<p>Effects at higher levels:</p>
-@foreach (string level in mySpell.higher_level)
-{
-    <p>@level</p>
-}
-@if(mySpell.material != null){
+    @if (mySpell.higher_level.Length != 0)
+    {
+        <p>Effects at higher levels:</p>
+        @foreach (string level in mySpell.higher_level)
+        {
+            <p>@level</p>
+        }
+    }
+    @if(mySpell.material != null){
     <p>Material: @mySpell.material</p>
 }
 <p>Duration: @mySpell.duration</p>
@@ -72,7 +75,5 @@
     {
         mySpell = await JsonSerializer.DeserializeAsync<Spell.Rootobject>
          (await httpClient.GetStreamAsync($"/api/spells/{spellindex}"));
-
-       // damage = mySpell.damage.damage_at_slot_level;
     }
 }
