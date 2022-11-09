@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dndprojectv1.Server", "Dndprojectv1\Server\Dndprojectv1.Server.csproj", "{7EE27CB2-79A4-4093-BCA1-36035F6E5C2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dndprojectv1.Server", "Dndprojectv1\Server\Dndprojectv1.Server.csproj", "{7EE27CB2-79A4-4093-BCA1-36035F6E5C2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dndprojectv1.Client", "Dndprojectv1\Client\Dndprojectv1.Client.csproj", "{4367EAD7-7BA4-447F-8DFB-79BE2E733328}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dndprojectv1.Client", "Dndprojectv1\Client\Dndprojectv1.Client.csproj", "{4367EAD7-7BA4-447F-8DFB-79BE2E733328}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dndprojectv1.Shared", "Dndprojectv1\Shared\Dndprojectv1.Shared.csproj", "{B993F77C-50EB-49C2-A960-6F5EF88B43BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dndprojectv1.Shared", "Dndprojectv1\Shared\Dndprojectv1.Shared.csproj", "{B993F77C-50EB-49C2-A960-6F5EF88B43BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
