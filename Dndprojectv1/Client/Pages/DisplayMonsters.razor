@@ -4,7 +4,9 @@
 @using Dndprojectv1.Shared
 <h3>Display Monsters</h3>
 @foreach(ApiClasses.Result monster in myMonsters){
+    <a href="/monster/@monster.index">
     <p>@monster.name</p>
+    </a>
 }
 
 
