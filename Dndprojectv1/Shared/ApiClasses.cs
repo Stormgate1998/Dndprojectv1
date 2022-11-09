@@ -321,4 +321,96 @@ namespace Dndprojectv1.Shared
 
     }
 
+    public class Race
+    {
+
+        public class Rootobject
+        {
+            public string index { get; set; }
+            public string name { get; set; }
+            public int speed { get; set; }
+            public Ability_Bonuses[] ability_bonuses { get; set; }
+            public string alignment { get; set; }
+            public string age { get; set; }
+            public string size { get; set; }
+            public string size_description { get; set; }
+            public Starting_Proficiencies[] starting_proficiencies { get; set; }
+            public Starting_Proficiency_Options starting_proficiency_options { get; set; }
+            public Language[] languages { get; set; }
+            public string language_desc { get; set; }
+            public Trait[] traits { get; set; }
+            public Subrace[] subraces { get; set; }
+            public string url { get; set; }
+        }
+
+        public class Starting_Proficiency_Options
+        {
+            public string desc { get; set; }
+            public int choose { get; set; }
+            public string type { get; set; }
+            public From from { get; set; }
+        }
+
+        public class From
+        {
+            public string option_set_type { get; set; }
+            public Option[] options { get; set; }
+        }
+
+        public class Option
+        {
+            public string option_type { get; set; }
+            public Item item { get; set; }
+        }
+
+        public class Item
+        {
+            public string index { get; set; }
+            public string name { get; set; }
+            public string url { get; set; }
+        }
+
+        public class Ability_Bonuses
+        {
+            public Ability_Score ability_score { get; set; }
+            public int bonus { get; set; }
+        }
+
+        public class Ability_Score
+        {
+            public string index { get; set; }
+            public string name { get; set; }
+            public string url { get; set; }
+        }
+
+        public class Starting_Proficiencies
+        {
+            public string index { get; set; }
+            public string name { get; set; }
+            public string url { get; set; }
+        }
+
+        public class Language
+        {
+            public string index { get; set; }
+            public string name { get; set; }
+            public string url { get; set; }
+        }
+
+        public class Trait
+        {
+            public string index { get; set; }
+            public string name { get; set; }
+            public string url { get; set; }
+        }
+
+        public class Subrace
+        {
+            public string index { get; set; }
+            public string name { get; set; }
+            public string url { get; set; }
+        }
+
+    }
+
 }
