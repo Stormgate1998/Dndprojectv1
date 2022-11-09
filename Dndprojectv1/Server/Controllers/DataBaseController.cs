@@ -7,6 +7,12 @@ namespace Dndprojectv1.Server.Controllers
     [ApiController]
     public class DataBaseController : ControllerBase
     {
+        private readonly DNDDbContext dNDDb;
+
+        public DataBaseController( DNDDbContext dNDDb)
+        {
+            this.dNDDb = dNDDb;
+        }
         [HttpGet("[action]")]
         public async Task GetCharacter()
         { 
