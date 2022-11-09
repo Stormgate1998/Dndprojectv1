@@ -1,12 +1,14 @@
 ﻿using Dndprojectv1.Shared;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-public class DNDDbContext : IdentityDbContext
+public class DNDDbContext : DbContext
 {
+    public DNDDbContext()
+    { 
+    }
     public DNDDbContext(DbContextOptions<DNDDbContext> options)
            : base(options)
     {
-        DbSet<UserCharacterInfo> userCharacterInfos;
     }
+    DbSet<UserCharacterInfo> userCharacterInfos;
 }
