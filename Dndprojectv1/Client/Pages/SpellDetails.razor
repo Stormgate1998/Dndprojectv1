@@ -2,6 +2,8 @@
 @using System.Text.Json;
 @using System.Text.Json.Serialization;
 @using Dndprojectv1.Shared;
+@inject JsonService jservice;
+
 @if(@mySpell != null){
 <h3>Spell Details</h3>
 
@@ -63,17 +65,10 @@
 
     //get only spell data
     //build spell class
-
-    [Inject]
-    public HttpClient httpClient { get; set; }
-
-    public Spell.Damage_At_Slot_Level damage { get; set; }
-
     public Spell.Rootobject mySpell { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        mySpell = await JsonSerializer.DeserializeAsync<Spell.Rootobject>
-         (await httpClient.GetStreamAsync($"/api/spells/{spellindex}"));
+        mySpell = await jservice.Spell(spellindex);
     }
 }
