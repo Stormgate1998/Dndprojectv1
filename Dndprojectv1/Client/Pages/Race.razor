@@ -1,5 +1,36 @@
-﻿<h3>race</h3>
+﻿@page "/races"
+@using System.Text.Json;
+@using System.Text.Json.Serialization;
+@using Dndprojectv1.Shared
+@inject JsonService jservice;
+<h3>Races</h3>
+@if (myRaces != null)
+{
+    @foreach (ApiClasses.Result spell in myRaces)
+    {
+
+        <a href="/spell/@spell.index">
+            <p>@spell.name</p>
+        </a>
+    }
+
+}
+
 
 @code {
+    [Inject]
+    public HttpClient httpClient { get; set; }
+
+
+    public ApiClasses.Rootobject myJson { get; set; }
+
+    public ApiClasses.Result[] myRaces { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        myJson = await jservice.ListItem("races");
+        myRaces = myJson.results;
+    }
 
 }

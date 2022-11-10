@@ -321,7 +321,7 @@ namespace Dndprojectv1.Shared
 
     }
 
-    public class Race
+    public class Races
     {
 
         public class Rootobject

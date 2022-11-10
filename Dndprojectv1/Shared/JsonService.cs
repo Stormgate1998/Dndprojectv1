@@ -41,11 +41,11 @@ namespace Dndprojectv1.Shared
             return myJson;
         }
 
-        public async Task<Race.Rootobject> Race(string url)
+        public async Task<Races.Rootobject> Race(string url)
         {
-            Race.Rootobject myJson;
-            myJson = await JsonSerializer.DeserializeAsync<Race.Rootobject>
-        (await httpClient.GetStreamAsync($"/api/raceses/{url}"));
+            Races.Rootobject myJson;
+            myJson = await JsonSerializer.DeserializeAsync<Races.Rootobject>
+        (await httpClient.GetStreamAsync($"/api/races/{url}"));
             return myJson;
         }
     }
